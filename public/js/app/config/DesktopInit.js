@@ -14,8 +14,6 @@ require.config({
       // --------------
       "jquery": "libs/jquery",
 
-      "jqueryui": "libs/jqueryui",
-
       "underscore": "libs/lodash",
 
       "backbone": "libs/backbone",
@@ -23,8 +21,6 @@ require.config({
       // Plugins
       // -------
       "backbone.validateAll": "libs/plugins/Backbone.validateAll",
-
-      "bootstrap": "libs/plugins/bootstrap",
 
       "text": "libs/plugins/text",
 
@@ -70,7 +66,7 @@ require.config({
 });
 
 // Includes Desktop Specific JavaScript files here (or inside of your Desktop router)
-require(["jquery", "backbone", "routers/DesktopRouter", "jqueryui", "bootstrap", "backbone.validateAll"],
+require(["jquery", "backbone", "routers/DesktopRouter", "backbone.validateAll"],
 
   function($, Backbone, DesktopRouter) {
 

@@ -12,8 +12,6 @@ require.config({
       // --------------
       "jquery": "libs/jquery",
 
-      "jquerymobile": "libs/jquery.mobile",
-
       "underscore": "libs/lodash",
 
       "backbone": "libs/backbone",
@@ -55,9 +53,6 @@ require.config({
       // Jasmine-jQuery plugin
       "jasminejquery": ["jquery"],
 
-      // jQuery Mobile
-      "jquerymobile": ["jquery"],
-
       // Backbone
       "backbone": {
 
@@ -94,7 +89,7 @@ require.config({
 });
 
 // Include Desktop Specific JavaScript files here (or inside of your Desktop router)
-require(["jquery", "backbone", "jasmine-html", "jquerymobile", "bootstrap", "backbone.validateAll"],
+require(["jquery", "backbone", "jasmine-html", "backbone.validateAll"],
 
   function($, Backbone, jasmine) {
 

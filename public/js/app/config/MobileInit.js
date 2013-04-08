@@ -13,8 +13,6 @@ require.config({
       // --------------
       "jquery": "libs/jquery",
 
-      "jquerymobile": "libs/jquery.mobile",
-
       "underscore": "libs/lodash",
 
       "backbone": "libs/backbone",
@@ -43,9 +41,6 @@ require.config({
   // - Helpful for including non-AMD compatible scripts and managing dependencies
   shim: {
 
-      // jQuery Mobile
-      "jquerymobile": ["jquery"],
-
       // Backbone
       "backbone": {
 
@@ -65,15 +60,9 @@ require.config({
 });
 
 // Include Desktop Specific JavaScript files here (or inside of your Desktop router)
-require(["jquery", "backbone", "routers/MobileRouter", "jquerymobile", "backbone.validateAll"],
+require(["jquery", "backbone", "routers/MobileRouter", "backbone.validateAll"],
 
   function($, Backbone, MobileRouter) {
-
-    // Prevents all anchor click handling
-    $.mobile.linkBindingEnabled = false;
-
-    // Disabling this will prevent jQuery Mobile from handling hash changes
-    $.mobile.hashListeningEnabled = false;
 
     // Instantiates a new Mobile Router instance
     new MobileRouter();

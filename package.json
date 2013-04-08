@@ -1,25 +1,25 @@
 {
-  "name": "Backbone-Require-Boilerplate",
-  "title": "Backbone and Require Boilerplate",
+  "name": "Backbone-Require-Boilerplate-Lite",
+  "title": "Backbone and Require Boilerplate Lite",
   "description": "A Backbone.js and Require.js Boilerplate that promotes decoupling your JavaScript into modules, separating business logic from application logic using Models and Views, reusing your JavaScript between Desktop and Mobile Web versions, including non-AMD Compatible Third Party Scripts in your project, and optimizing all of your JavaScript (minify, concatenate, etc).",
-  "version": "1.2.0",
-  "homepage": "https://github.com/gfranko/Backbone-Require-Boilerplate",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nickpack/Backbone-Require-Boilerplate-Lite",
   "author": {
-    "name": "Greg Franko",
-    "email": "gfranko5@yahoo.com",
-    "url": "http://www.gregfranko.com"
+    "name": "Nick Pack",
+    "email": "nick@nickpack.com",
+    "url": "http://0xdeadfa11.net"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:gfranko/Backbone-Require-Boilerplate.git"
+    "url": "git@github.com:nickpack/Backbone-Require-Boilerplate-Lite.git"
   },
   "bugs": {
-    "url": "https://github.com/gfranko/Backbone-Require-Boilerplate/issues"
+    "url": "https://github.com/nickpack/Backbone-Require-Boilerplate-Lite/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/gfranko/Backbone-Require-Boilerplate/blob/master/LICENSE-MIT"
+      "url": "https://github.com/nickpack/Backbone-Require-Boilerplate-Lite/blob/master/LICENSE-MIT"
     }
   ],
   "main": "./server/server",
