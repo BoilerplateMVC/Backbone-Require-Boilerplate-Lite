@@ -1,11 +1,14 @@
-Backbone-Require-Boilerplate (BRB)
-==================================
+Backbone-Require-Boilerplate Lite (BRBL)
+========================================
 ![Example](http://3.bp.blogspot.com/-JFOJ-k6tLnA/TsiKgBYPvqI/AAAAAAAAAT8/dGXeu0LeuTE/s320/backbone-js-logo.png) ![Example](http://requirejs.org/i/logo.png)
 
 [Website](http://gregfranko.com/Backbone-Require-Boilerplate/)
 
 #Description
 A Backbone.js and Require.js Boilerplate that promotes decoupling your JavaScript into modules, separating business logic from application logic using Collections/Models and Views, reusing your JavaScript between Desktop and Mobile Web versions while using a mobile framework (jQuery Mobile), including non-AMD Compatible Third Party Scripts in your project, optimizing all of your JavaScript (minify, concatenate, etc), and unit testing your JavaScript.
+
+#Whats the difference between the Lite and Standard versions of the boilerplate?
+The Lite version has Bootstrap, jQuery UI and jQuery mobile removed. It is intended solely to speed up the time it takes to get rolling on a project where you need to use your own grid system/js libs etc.
 
 #Getting Started
    1. Download and install [Node.js](http://nodejs.org/#download)
@@ -36,11 +39,11 @@ index.html
 
    _Mobile or Tablet Browser_
 
-   If a mobile browser is found, then Require.js is included asynchronously within the HTML page, and the Require.js script tag HTML5 data attribute, `data-main`, is set to `js/app/config/MobileInit` (this tells Require.js to look for a MobileInit.js file inside of the config folder).  The combined jQuery Mobile and common CSS file are also included asynchronously.
+   If a mobile browser is found, then Require.js is included asynchronously within the HTML page, and the Require.js script tag HTML5 data attribute, `data-main`, is set to `js/app/config/MobileInit` (this tells Require.js to look for a MobileInit.js file inside of the config folder).  The common CSS file is also included asynchronously.
 
    _Desktop Browser_
    
-   If a desktop device is found, then Require.js is included asynchronously within the HTML page, and the Require.js script tag HTML5 data attribute, `data-main`, is set to `js/app/config/DesktopInit` (this tells Require.js to look for a DesktopInit.js file inside of the config folder).  The combined Bootstrap and common CSS file are also included asynchronously.
+   If a desktop device is found, then Require.js is included asynchronously within the HTML page, and the Require.js script tag HTML5 data attribute, `data-main`, is set to `js/app/config/DesktopInit` (this tells Require.js to look for a DesktopInit.js file inside of the config folder).  The common CSS file is also included asynchronously.
 
    **Note**:  You do not need to use the JavaScript mobile detection script for your application to use Backbone.js or Require.js. I just put it in so that you could see an example of how to separate your Mobile and Desktop JavaScript logic.
 
@@ -99,14 +102,6 @@ MobileInit.js
 
    After Require.js is configured, you will notice the `require` method is called.  The `require` method is asynchronously including all of the files/dependencies passed into the first parameter (jQuery, Backbone, Lodash, mobileRouter, etc) into the page.
 
-   After all of those files are included on the page, two internal jQuery Mobile properties are turned off to allow Backbone.js to handle all of the routing.
-
-            // Prevents all anchor click handling
-            $.mobile.linkBindingEnabled = false;
-
-            // Disabling this will prevent jQuery Mobile from handling hash changes
-            $.mobile.hashListeningEnabled = false;
-
    Finally, a new router instance is instantiated to allow you to use Backbone's routing mechanism (keep reading below for more clarification).
 
    **Note**: You don't need to instantiate a new router instance if you aren't using a Backbone Router class.
@@ -115,7 +110,7 @@ DesktopInit.js
 --------------
    DesktopInit.js is only used if a desktop browser is detected.  This is where your desktop Require.js configurations will be.
 
-   This file is the exact same as MobileInit.js, except it has a few different dependencies (Twitter Bootstrap instead of jQuery Mobile, etc)
+   This file is the exact same as MobileInit.js, except it has a few different dependencies.
 
 MobileRouter.js
 ---------------
@@ -231,7 +226,7 @@ spec.js
 
 **What libraries have you included?**
 
-   -Backbone, Require, Grunt, Lodash, Almond, jQuery, jQueryUI, jQuery Mobile, Twitter Bootstrap, and Jasmine (w/the jasmine-jquery plugin)
+   -Backbone, Require, Grunt, Lodash, Almond, jQuery and Jasmine (w/the jasmine-jquery plugin)
 
 **What Require.js plugins are you using?**
 
@@ -276,6 +271,9 @@ spec.js
    -Please do!  I am learning just like you.  If you want to contribute, please send pull requests to the dev branch.
 
 ##Change Log
+`1.4.0 Lite` - April 8, 2013
+
+- Removed Bootstrap, jQuery Mobile and jQuery UI
 
 `1.4.0` - April 6, 2013
 
