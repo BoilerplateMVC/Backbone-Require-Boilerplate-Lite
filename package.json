@@ -2,7 +2,7 @@
   "name": "Backbone-Require-Boilerplate-Lite",
   "title": "Backbone and Require Boilerplate Lite",
   "description": "A Backbone.js and Require.js Boilerplate that promotes decoupling your JavaScript into modules, separating business logic from application logic using Models and Views, reusing your JavaScript between Desktop and Mobile Web versions, including non-AMD Compatible Third Party Scripts in your project, and optimizing all of your JavaScript (minify, concatenate, etc).",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "homepage": "https://github.com/nickpack/Backbone-Require-Boilerplate-Lite",
   "author": {
     "name": "Nick Pack",
