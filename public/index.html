@@ -19,61 +19,27 @@
 
   <!--Detect if the browser is a mobile browser or a desktop browser and conditionally include your JavaScript --> 
   <script>
-
-      // Mobile/Desktop Detection script
       (function(ua, w, d, undefined) {
 
         // App Environment
         // ---------------
         //  Tip: Set to true to turn on "production" mode
         var production = false,
-
-          // Configuration object that will contain the correct prod/dev CSS and JavaScript files to load
-          config = {}
-
-          // Mobile/Tablet Logic
-          if((/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(ua)) {
-
-            // Mobile/Tablet CSS and JavaScript files to load
             config = {
 
-              // CSS files that are loaded when in development mode
-              "dev-css": ["css/mobile.css"],
+              // Loaded when not in production mode
+              "dev-css": ["css/app.css"],
 
-              // CSS files that are loaded when in production mode
-              "prod-css": ["css/mobile.min.css"],
+              // Loaded when in production mode
+              "prod-css": ["css/app.min.css"],
 
-              // JavaScript files that are loaded when in development mode
-              "dev-js": [{ "data-main": "js/app/config/MobileInit.js", "src": "js/libs/require.js" }],
+              // Loaded when not in production mode
+              "dev-js": [{ "data-main": "js/app/config/Init.js", "src": "js/libs/require.js" }],
 
-              // JavaScript files that are loaded when in production mode
-              "prod-js": ["js/app/config/MobileInit.min.js"]
+              // Loaded when in production mode
+              "prod-js": ["js/app/config/Init.min.js"]
 
             };
-
-          }
-
-          // Desktop Logic
-          else {
-
-            // Desktop files to load
-            config = {
-
-              // Loaded when not in production mode
-              "dev-css": ["css/desktop.css"],
-
-              // Loaded when in production mode
-              "prod-css": ["css/desktop.min.css"],
-
-              // Loaded when not in production mode
-              "dev-js": [{ "data-main": "js/app/config/DesktopInit.js", "src": "js/libs/require.js" }],
-
-              // Loaded when in production mode
-              "prod-js": ["js/app/config/DesktopInit.min.js"]
-
-            }
-
-          }
 
           // Loads the correct CSS and JavaScript files
           loadFiles(config);

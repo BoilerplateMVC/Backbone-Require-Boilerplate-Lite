@@ -1,10 +1,10 @@
-// MobileRouter.js
-// ---------------
+// DesktopRouter.js
+// ----------------
 define(["jquery", "backbone", "models/Model", "views/View", "collections/Collection"],
-        
-    function($, Backbone, UserModel, View, Collection) {
 
-        var MobileRouter = Backbone.Router.extend({
+    function($, Backbone, Model, View, Collection) {
+
+        var Router = Backbone.Router.extend({
 
             initialize: function() {
 
@@ -15,8 +15,8 @@ define(["jquery", "backbone", "models/Model", "views/View", "collections/Collect
 
             // All of your Backbone Routes (add more)
             routes: {
-                
-                // When there is no hash bang on the url, the home method is called
+
+                // When there is no hash on the url, the home method is called
                 "": "index"
 
             },
@@ -27,11 +27,11 @@ define(["jquery", "backbone", "models/Model", "views/View", "collections/Collect
                 new View();
 
             }
-    
+
         });
 
-        // Returns the MobileRouter class
-        return MobileRouter;
+        // Returns the DesktopRouter class
+        return Router;
 
     }
 

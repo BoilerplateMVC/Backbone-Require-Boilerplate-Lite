@@ -24,8 +24,6 @@ require.config({
       // -------
       "backbone.validateAll": "libs/plugins/Backbone.validateAll",
 
-      "bootstrap": "libs/plugins/bootstrap",
-
       "text": "libs/plugins/text",
 
       "jasminejquery": "libs/plugins/jasmine-jquery",
@@ -46,9 +44,6 @@ require.config({
 
   // Sets the configuration for your third party scripts that are not AMD compatible
   shim: {
-
-      // Twitter Bootstrap jQuery plugins
-      "bootstrap": ["jquery"],
 
       // Jasmine-jQuery plugin
       "jasminejquery": ["jquery"],
@@ -88,7 +83,7 @@ require.config({
 
 });
 
-// Include Desktop Specific JavaScript files here (or inside of your Desktop router)
+// Include JavaScript files here (or inside of your router)
 require(["jquery", "backbone", "jasmine-html", "backbone.validateAll"],
 
   function($, Backbone, jasmine) {

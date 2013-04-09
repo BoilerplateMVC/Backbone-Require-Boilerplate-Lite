@@ -1,5 +1,5 @@
 //
-// DesktopInit.js
+// Init.js
 // --------------
 require.config({
 
@@ -41,9 +41,6 @@ require.config({
   // Sets the configuration for your third party scripts that are not AMD compatible
   shim: {
 
-      // Twitter Bootstrap jQuery plugins
-      "bootstrap": ["jquery"],
-
       // jQueryUI
       "jqueryui": ["jquery"],
 
@@ -66,12 +63,12 @@ require.config({
 });
 
 // Includes Desktop Specific JavaScript files here (or inside of your Desktop router)
-require(["jquery", "backbone", "routers/DesktopRouter", "backbone.validateAll"],
+require(["jquery", "backbone", "routers/Router", "backbone.validateAll"],
 
-  function($, Backbone, DesktopRouter) {
+  function($, Backbone, Router) {
 
     // Instantiates a new Desktop Router instance
-    new DesktopRouter();
+    new Router();
 
   }
 
